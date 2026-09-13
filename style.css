@@ -1,0 +1,197 @@
+/* ==========================================================================
+   কেন ভাইরাল — শেয়ার্ড স্টাইলশিট
+   Design concept: শান্ত, সম্পাদকীয় (editorial) লে-আউট যা ইন্টারনেটের হইচই থেকে
+   আলাদা — চিৎকার করা নিয়ন রঙ নয়, বরং স্থির কালি ও কাগজের অনুভূতি।
+   ========================================================================== */
+
+:root {
+  --paper: #e7e6dc;
+  --paper-card: #efeee5;
+  --ink: #1c231f;
+  --ink-soft: #4b564f;
+  --accent: #c1442c;      /* সিগন্যাল রং — ট্যাগ, লিংক হোভার, হাইলাইট */
+  --accent-teal: #2e6659; /* সেকেন্ডারি — লিংক */
+  --line: #c7c2ae;
+  --max-w: 640px;
+}
+
+* { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: "Hind Siliguri", "Noto Sans Bengali", sans-serif;
+  font-size: 17px;
+  line-height: 1.75;
+}
+
+h1, h2, h3, .headline {
+  font-family: "Noto Serif Bengali", serif;
+  font-weight: 600;
+  line-height: 1.35;
+  margin: 0 0 0.4em;
+  color: var(--ink);
+}
+
+a {
+  color: var(--accent-teal);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+}
+a:hover { color: var(--accent); }
+
+.wrap {
+  max-width: var(--max-w);
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* ---------- হেডার ---------- */
+.site-header {
+  padding: 36px 0 20px;
+  border-bottom: 1px solid var(--line);
+}
+.site-header .wrap {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.site-name {
+  font-family: "Noto Serif Bengali", serif;
+  font-size: 26px;
+  font-weight: 700;
+  text-decoration: none;
+  color: var(--ink);
+}
+.site-tagline {
+  color: var(--ink-soft);
+  font-size: 14px;
+}
+.site-nav {
+  margin-top: 10px;
+}
+.site-nav a {
+  margin-right: 18px;
+  color: var(--ink-soft);
+  font-size: 14px;
+  text-decoration: none;
+}
+.site-nav a:hover { color: var(--accent); }
+
+/* ---------- হিরো / আজকের ব্যাখ্যা ---------- */
+.hero {
+  margin: 34px 0 40px;
+  padding: 22px 24px;
+  background: var(--paper-card);
+  border-left: 4px solid var(--accent);
+  animation: rise 0.6s ease-out;
+}
+@keyframes rise {
+  from { opacity: 0; transform: translateY(8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.hero .kicker {
+  font-size: 13px;
+  color: var(--accent);
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+.hero h1 { font-size: 28px; }
+.hero p { color: var(--ink-soft); margin: 10px 0 14px; }
+.hero .read-link { font-weight: 600; }
+
+/* ---------- পোস্ট তালিকা ---------- */
+.post-list { margin: 0 0 40px; }
+.post-row {
+  display: block;
+  padding: 20px 0;
+  border-bottom: 1px solid var(--line);
+  text-decoration: none;
+  color: inherit;
+}
+.post-row:hover .post-title { color: var(--accent); }
+.post-row .meta {
+  font-size: 13px;
+  color: var(--ink-soft);
+  margin-bottom: 6px;
+}
+.post-row .tag {
+  color: var(--accent-teal);
+}
+.post-row .post-title {
+  font-family: "Noto Serif Bengali", serif;
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--ink);
+}
+.post-row .hook {
+  color: var(--ink-soft);
+  font-size: 15px;
+  margin-top: 6px;
+}
+
+/* ---------- বিজ্ঞাপন স্লট ---------- */
+.ad-slot {
+  margin: 32px 0;
+  padding: 14px;
+  text-align: center;
+  border: 1px dashed var(--line);
+  color: var(--ink-soft);
+  font-size: 12px;
+}
+
+/* ---------- আর্টিকেল পাতা ---------- */
+.article-header { margin: 40px 0 24px; }
+.article-header .meta { font-size: 14px; color: var(--ink-soft); margin-bottom: 10px; }
+.article-header h1 { font-size: 30px; }
+.article-body { font-size: 18px; }
+.article-body p { margin: 0 0 20px; }
+.article-body h2 {
+  font-size: 22px;
+  margin-top: 36px;
+}
+.byline {
+  margin-top: 40px;
+  padding-top: 16px;
+  border-top: 1px solid var(--line);
+  font-size: 14px;
+  color: var(--ink-soft);
+}
+
+/* ---------- সাধারণ পাতা (About / Contact / Privacy) ---------- */
+.page-header { margin: 40px 0 20px; }
+.page-body p { margin: 0 0 18px; }
+
+/* ---------- ফুটার ---------- */
+.site-footer {
+  margin-top: 50px;
+  padding: 24px 0 50px;
+  border-top: 1px solid var(--line);
+  font-size: 13px;
+  color: var(--ink-soft);
+}
+.site-footer a { color: var(--ink-soft); margin-right: 14px; }
+.site-footer a:hover { color: var(--accent); }
+
+/* ---------- রেসপন্সিভ ---------- */
+@media (max-width: 480px) {
+  body { font-size: 16px; }
+  .hero h1 { font-size: 23px; }
+  .article-header h1 { font-size: 25px; }
+  .post-row .post-title { font-size: 18px; }
+}
+
+/* কীবোর্ড ফোকাস দৃশ্যমান রাখা */
+a:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero { animation: none; }
+}
