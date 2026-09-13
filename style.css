@@ -105,6 +105,34 @@ a:hover { color: var(--accent); }
 .hero p { color: var(--ink-soft); margin: 10px 0 14px; }
 .hero .read-link { font-weight: 600; }
 
+/* ---------- ছবি ---------- */
+.featured-img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  margin: 16px 0 4px;
+  background: var(--line); /* ছবি লোড হওয়ার আগে হালকা প্লেসহোল্ডার রং */
+}
+.thumb {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  margin-bottom: 10px;
+  background: var(--line);
+}
+.article-body img {
+  width: 100%;
+  height: auto;
+  margin: 8px 0 24px;
+}
+.img-caption {
+  font-size: 13px;
+  color: var(--ink-soft);
+  margin: 6px 0 20px;
+}
+
 /* ---------- পোস্ট তালিকা ---------- */
 .post-list { margin: 0 0 40px; }
 .post-row {
